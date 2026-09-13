@@ -14,6 +14,8 @@ The dashboard presents the latest sensor state, historical measurements, test-ca
 
 For a public, read-only portfolio version that does not require hardware or persistent data storage, deploy the [static Vercel demo](vercel-demo/README.md). The local Flask dashboard remains the executable validation interface.
 
+**Live simulated preview:** [hardware-validation-platform.vercel.app](https://hardware-validation-platform.vercel.app/)
+
 ## Architecture and coverage
 
 `validation_framework/hardware/` contains hardware adapters behind a small `HardwareModule` contract: `initialize`, `verify_connectivity`, `read`, and `close`. `HardwareValidator` adds timestamps, error capture, normal/high-load/disconnect conditions, and durable logs. `RegressionSuite` applies acceptance rules, while `ResultStore` writes append-only JSONL, human-friendly CSV, and regression summaries. The Flask application consumes those same files; it has no access to GPIO and does not control equipment.
