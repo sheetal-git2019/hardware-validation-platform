@@ -4,7 +4,7 @@
 
 This package validates a DHT22 temperature/humidity sensor on a Raspberry Pi and provides an extensible path for other hardware modules. It is safe to develop on a laptop: the default `SimulatedDHT22` adapter produces realistic readings and exercises disconnect recovery without GPIO hardware. Pass `--hardware` only on the Pi connected to the physical device.
 
-For a concise design overview and interview walk-through, see [Architecture](docs/ARCHITECTURE.md) and the [five-minute demo script](docs/INTERVIEW_DEMO.md).
+For a concise design overview and execution guide, see [Architecture](docs/ARCHITECTURE.md) and the [validation walkthrough](docs/VALIDATION_WALKTHROUGH.md).
 
 ## Architecture and coverage
 
