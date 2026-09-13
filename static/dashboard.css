@@ -1,0 +1,5 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #10151f; color: #edf2f7; }
+body { margin: 0; } main { max-width: 1100px; margin: auto; padding: 28px; } h1 { margin-bottom: 0; } .subtitle, small { color: #a9b7c6; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin: 25px 0; } article, .panel { background: #192230; border: 1px solid #2d3b4e; border-radius: 10px; padding: 18px; }
+article span, article small { display: block; } article strong { display: inline-block; font-size: 2rem; margin: 8px 0; } .panel { margin-top: 18px; } canvas { background: #111923; max-width: 100%; }
+table { width: 100%; border-collapse: collapse; } th, td { text-align: left; padding: 10px; border-bottom: 1px solid #2d3b4e; } .pass { color: #4ade80; } .fail { color: #fb7185; }

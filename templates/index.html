@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hardware Validation Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+<body>
+  <main>
+    <h1>Hardware Validation Dashboard</h1>
+    <p class="subtitle">Updates every five seconds from structured validation logs.</p>
+    <section class="cards">
+      <article><span>Temperature</span><strong id="temperature">—</strong><small>°C</small></article>
+      <article><span>Humidity</span><strong id="humidity">—</strong><small>% RH</small></article>
+      <article><span>Connection</span><strong id="connection">—</strong><small id="last-seen">No samples</small></article>
+      <article><span>Last regression</span><strong id="regression">—</strong><small id="regression-time">No runs</small></article>
+      <article><span>Release gate</span><strong id="release-gate">—</strong><small id="quality-summary">No quality summary</small></article>
+    </section>
+    <section class="panel"><h2>Historical trend</h2><canvas id="trend" width="1000" height="300" aria-label="Temperature and humidity trend"></canvas></section>
+    <section class="panel"><h2>Regression runs</h2><table><thead><tr><th>Finished</th><th>Run ID</th><th>Status</th><th>Cases</th></tr></thead><tbody id="runs"></tbody></table></section>
+  </main>
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>

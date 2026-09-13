@@ -1,0 +1,43 @@
+{
+  "plan_id": "HWSW-VAL-001",
+  "title": "Environmental Sensor Validation Plan",
+  "release_gate": "No blocking test failure; all release-blocking cases must execute and pass.",
+  "tests": [
+    {
+      "key": "sensor_data_integrity",
+      "id": "VAL-001",
+      "requirement": "REQ-SENS-001",
+      "title": "Sensor data integrity",
+      "tags": ["smoke", "regression", "functional"],
+      "priority": "P0",
+      "release_blocking": true
+    },
+    {
+      "key": "disconnect_reconnect_recovery",
+      "id": "VAL-002",
+      "requirement": "REQ-REC-001",
+      "title": "Disconnect and recovery",
+      "tags": ["smoke", "regression", "recovery"],
+      "priority": "P0",
+      "release_blocking": true
+    },
+    {
+      "key": "continuous_sampling_performance",
+      "id": "VAL-003",
+      "requirement": "REQ-PERF-001",
+      "title": "Continuous sampling under load",
+      "tags": ["regression", "stress", "performance"],
+      "priority": "P1",
+      "release_blocking": true
+    },
+    {
+      "key": "fault_injection_detection",
+      "id": "VAL-004",
+      "requirement": "REQ-QUAL-001",
+      "title": "Injected out-of-range data is detected",
+      "tags": ["regression", "negative", "fault-injection"],
+      "priority": "P1",
+      "release_blocking": false
+    }
+  ]
+}
