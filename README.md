@@ -6,6 +6,14 @@ This package validates a DHT22 temperature/humidity sensor on a Raspberry Pi and
 
 For a concise design overview and execution guide, see [Architecture](docs/ARCHITECTURE.md) and the [validation walkthrough](docs/VALIDATION_WALKTHROUGH.md).
 
+## Dashboard preview
+
+The dashboard presents the latest sensor state, historical measurements, test-case status, pass rate, and release-gate decision. This screenshot uses simulated data; it is not evidence from physical hardware.
+
+![Hardware validation dashboard preview](docs/assets/dashboard-preview.png)
+
+For a public, read-only portfolio version that does not require hardware or persistent data storage, deploy the [static Vercel demo](vercel-demo/README.md). The local Flask dashboard remains the executable validation interface.
+
 ## Architecture and coverage
 
 `validation_framework/hardware/` contains hardware adapters behind a small `HardwareModule` contract: `initialize`, `verify_connectivity`, `read`, and `close`. `HardwareValidator` adds timestamps, error capture, normal/high-load/disconnect conditions, and durable logs. `RegressionSuite` applies acceptance rules, while `ResultStore` writes append-only JSONL, human-friendly CSV, and regression summaries. The Flask application consumes those same files; it has no access to GPIO and does not control equipment.

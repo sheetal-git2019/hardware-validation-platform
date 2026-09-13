@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hardware Validation Platform — Portfolio Preview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <p class="eyebrow">SIMULATED PORTFOLIO PREVIEW · READ ONLY</p>
+    <h1>Hardware Validation Platform</h1>
+    <p class="subtitle">Traceable validation, fault injection, release gates, and engineering evidence.</p>
+    <p class="notice">This hosted view uses curated simulated data. It is not connected to Raspberry Pi hardware and does not collect telemetry.</p>
+    <section class="cards" aria-label="Latest validation summary">
+      <article><span>Temperature</span><strong id="temperature">—</strong><small>°C</small></article>
+      <article><span>Humidity</span><strong id="humidity">—</strong><small>% RH</small></article>
+      <article><span>Release gate</span><strong id="gate">—</strong><small id="gate-detail">—</small></article>
+      <article><span>Regression status</span><strong id="status">—</strong><small id="case-count">—</small></article>
+    </section>
+    <section class="panel"><h2>Historical trend</h2><canvas id="trend" width="1000" height="300" aria-label="Simulated temperature and humidity history"></canvas></section>
+    <section class="panel"><h2>Traceable validation evidence</h2><table><thead><tr><th>Test ID</th><th>Requirement</th><th>Category</th><th>Result</th></tr></thead><tbody id="results"></tbody></table></section>
+    <section class="panel methodology"><h2>What this demonstrates</h2><p>Test plans map requirements to automated checks. The executable framework runs a smoke or regression suite, injects deterministic faults, records structured evidence, and permits release only when blocking cases pass.</p><a href="https://github.com/sheetal-git2019/hardware-validation-platform">View source, test plan, CI, and documentation on GitHub →</a></section>
+  </main>
+  <script src="demo-data.js"></script><script src="app.js"></script>
+</body>
+</html>
