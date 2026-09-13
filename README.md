@@ -1,6 +1,10 @@
 # Raspberry Pi Hardware/Software Validation Framework
 
+[![Simulated validation](https://github.com/sheetal-git2019/hardware-validation-platform/actions/workflows/validation.yml/badge.svg)](https://github.com/sheetal-git2019/hardware-validation-platform/actions/workflows/validation.yml)
+
 This package validates a DHT22 temperature/humidity sensor on a Raspberry Pi and provides an extensible path for other hardware modules. It is safe to develop on a laptop: the default `SimulatedDHT22` adapter produces realistic readings and exercises disconnect recovery without GPIO hardware. Pass `--hardware` only on the Pi connected to the physical device.
+
+For a concise design overview and interview walk-through, see [Architecture](docs/ARCHITECTURE.md) and the [five-minute demo script](docs/INTERVIEW_DEMO.md).
 
 ## Architecture and coverage
 
